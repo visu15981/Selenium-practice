@@ -27,7 +27,7 @@ class Demoauto{
 		
 		driver.get("https://libraryvisu.ccbp.tech/");
 		
-		driver.findElement(By.tagName("input")).sendKeys("vishnu");
+		driver.findElement(By.xpath("//*[@id=\"searchInput\"]")).sendKeys("vishnu");
 
 		
 	}
