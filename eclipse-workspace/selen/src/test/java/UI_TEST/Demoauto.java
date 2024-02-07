@@ -1,22 +1,32 @@
 package UI_TEST;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 class Demoauto{
+	public static String browser="chrome";
+	public static WebDriver driver;
 	public static void main(String[]args) {
 		
-		WebDriverManager.chromedriver().setup();
+		if(browser.equals("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver =new ChromeDriver();
+		}
+		else {
+			WebDriverManager.edgedriver().setup();
+			driver=new EdgeDriver();
+		}
 		
-		ChromeDriver a = new ChromeDriver();
 		
-		a.manage().window().maximize();
+		driver.manage().window().maximize();
 		
-		a.get("https://libraryvisu.ccbp.tech/");
+		driver.get("https://libraryvisu.ccbp.tech/");
 		
-		a.findElement(By.id("searchInput")).sendKeys("vishnu");
+		driver.findElement(By.id("searchInput")).sendKeys("vishnu");
 		
 	}
 }
