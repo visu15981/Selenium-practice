@@ -27,9 +27,8 @@ class Demoauto{
 		
 		driver.get("https://libraryvisu.ccbp.tech/");
 		
-		driver.findElement(By.id("searchInput")).sendKeys("vishnu");
-		
-		driver.close();
+		driver.findElement(By.tagName("input")).sendKeys("vishnu");
+
 		
 	}
 }
