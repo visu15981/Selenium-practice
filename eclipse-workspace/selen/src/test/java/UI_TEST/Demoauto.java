@@ -28,5 +28,7 @@ class Demoauto{
 		
 		driver.findElement(By.id("searchInput")).sendKeys("vishnu");
 		
+		driver.close();
+		
 	}
 }
