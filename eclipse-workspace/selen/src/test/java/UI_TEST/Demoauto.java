@@ -1,16 +1,19 @@
 package UI_TEST;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.locators.RelativeLocator;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 class Demoauto{
 	public static String browser="chrome";
 	public static WebDriver driver;
-	public static void main(String[]args) {
+	public static void main(String[]args) throws InterruptedException {
 		
 		if(browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -21,14 +24,27 @@ class Demoauto{
 			driver=new EdgeDriver();
 		}
 		
-		//Test
+		
+		
+		driver.get("https://gandlatodo.ccbp.tech/");
 		
 		driver.manage().window().maximize();
 		
-		driver.get("https://libraryvisu.ccbp.tech/");
+		Thread.sleep(5000);
 		
-		driver.findElement(By.xpath("//*[@id=\"searchInput\"]")).sendKeys("vishnu");
-
+		driver.findElement(By.id("todoUserInput")).sendKeys("work1");
+		
+		Thread.sleep(5000);
+		
+		driver.findElement(By.id("addTodoButton")).click();
+		
+		Thread.sleep(5000);
+		
+		driver.findElement(By.tagName("i")).click();
+		
+		Thread.sleep(5000);
+		
+		driver.close();
 		
 	}
 }
