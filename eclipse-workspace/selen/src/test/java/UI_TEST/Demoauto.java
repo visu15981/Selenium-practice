@@ -42,6 +42,10 @@ class Demoauto{
 		
 		Thread.sleep(5000);
 		
+		driver.findElement(By.xpath("//button[@class=\"button\" and @id=\"saveTodoButton\"]")).click();
+		
+		Thread.sleep(6000);
+		
 		driver.findElement(By.tagName("i")).click();
 		
 		Thread.sleep(5000);
