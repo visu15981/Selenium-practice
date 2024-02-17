@@ -24,15 +24,12 @@ class Demoauto{
 			driver=new EdgeDriver();
 		}
 		
-		
-		
 		driver.get("https://gandlatodo.ccbp.tech/");
 		
 		driver.manage().window().maximize();
+
 		
-		Thread.sleep(5000);
-		
-		driver.findElement(By.id("todoUserInput")).sendKeys("work1");
+		driver.findElement(By.xpath("//input[@id=\"todoUserInput\"]")).sendKeys("work1");
 		
 		Thread.sleep(5000);
 		
