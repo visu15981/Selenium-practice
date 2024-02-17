@@ -37,14 +37,13 @@ class Demoauto{
 		
 		Thread.sleep(5000);
 		
-		driver.findElement(By.xpath("//input[@id='todoUserInput']")).sendKeys("work2");
+		driver.findElement(By.xpath("//input[starts-with(@id,todoUserInput)]")).sendKeys("work2");
 		
 		Thread.sleep(5000);
 		
 		driver.findElement(By.tagName("i")).click();
 		
 		Thread.sleep(5000);
-		
 		
 		driver.close();
 		
