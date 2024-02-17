@@ -44,6 +44,14 @@ class Demoauto{
 		driver.findElement(By.tagName("i")).click();
 		
 		Thread.sleep(5000);
+
+	    driver.findElement(By.xpath("//button[contains(@id,addtodobutton)]")).click();
+		
+		Thread.sleep(4000);
+		
+		driver.findElement(By.xpath("//i[contains(@class,far)]")).click();
+		
+		Thread.sleep(3000);
 		
 		driver.close();
 		
