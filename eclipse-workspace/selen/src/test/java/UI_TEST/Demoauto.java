@@ -38,7 +38,7 @@ class Demoauto{
 		
 		Thread.sleep(5000);
 		
-		driver.findElement(By.xpath("//input[@id=\"todoUserInput\" or @placeholder=\"what needs to be done?\"]")).sendKeys("work2");
+		driver.findElement(By.cssSelector("input.todo-user-input")).sendKeys("work2");
 		
 		Thread.sleep(5000);
 		
