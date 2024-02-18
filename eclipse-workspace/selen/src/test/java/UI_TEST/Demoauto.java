@@ -34,7 +34,7 @@ class Demoauto{
 		
 		Thread.sleep(5000);
 		
-		driver.findElement(By.id("addTodoButton")).click();
+		driver.findElement(By.cssSelector("button#addTodoButton")).click();
 		
 		Thread.sleep(5000);
 		
